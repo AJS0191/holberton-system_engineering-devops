@@ -1,0 +1,1 @@
+This directory stores the files associated with project 0x00-shell_basics
