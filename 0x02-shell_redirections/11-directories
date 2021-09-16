@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -dapR */ | grep / | wc -l
+ls -lRa | find -type d | wc -l
