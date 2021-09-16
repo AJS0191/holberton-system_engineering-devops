@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -dap * | grep / | wc -l
+ls -dapR */ | grep / | wc -l
