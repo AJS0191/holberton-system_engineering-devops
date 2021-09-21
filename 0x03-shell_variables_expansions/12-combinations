@@ -1,0 +1,2 @@
+#!/bin/bash
+echo {a..n}{a..n} {p..z}{p..z} o{a..n} o{p..z} | tr -s '\ \' "\n" | sort
