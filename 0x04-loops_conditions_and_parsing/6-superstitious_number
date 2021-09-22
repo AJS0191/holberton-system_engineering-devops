@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+#Testing while loops and case statements
+i=0 #calling the variable
+while (( i < 20 )) #calling while loop
+do
+    (( i++ ))
+    case $i in
+	4) echo $i
+	   echo "bad luck from China";;
+        9) echo $i
+	   echo "bad luck from Japan";;
+	17)echo $i
+	    echo "bad luck from Italy";;
+	*) echo $i
+
+    esac
+
+done    
+
