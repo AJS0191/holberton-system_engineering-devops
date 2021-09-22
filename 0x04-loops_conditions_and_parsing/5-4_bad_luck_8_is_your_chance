@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+#Testing while loops and if statements
+i=0 #calling the variable
+while (( i < 10 )) #calling while loop
+do
+    if (( i < 3 ));
+    then
+	echo "Holberton School" 
+	(( i++ ))
+    elif (( i == 3 ));
+    then
+	echo "bad luck" 
+	(( i++ ))
+    elif (( i == 7 ));
+	 then
+	 echo "good luck"
+	 (( i++ ))
+    else
+	echo "Holberton School"
+	(( i++ ))
+    fi
+done    
+
