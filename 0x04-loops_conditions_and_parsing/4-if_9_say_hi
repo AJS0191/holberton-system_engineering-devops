@@ -1,19 +1,17 @@
 #!/usr/bin/env bash
 #Testing while loops and if statements
-i=1 #calling the variable
-while (( i < 9 ))
+i=0 #calling the variable
+while (( i < 10 ))
 do
     echo "Holberton School" &
     (( i++ ))
 done
 
-    if (( i=9 ));
+    if (( i=8 ));
        then
+	   echo "Holberton School" &
 	   echo "Hi" &
 	   (( i++ ))
     fi
-    if (( i=10 ));
-    then
-	echo "Holberton School"
-    fi
+    
     
