@@ -9,9 +9,6 @@ done
 
     if (( i=8 ));
        then
-	   echo "Holberton School" &
-	   echo "Hi" &
+     	   echo "Hi" &
 	   (( i++ ))
     fi
-    
-    
