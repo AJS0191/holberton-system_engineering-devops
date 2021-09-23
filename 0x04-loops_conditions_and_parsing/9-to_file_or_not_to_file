@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 # In this file I am using if statments on files to prove existence
-Scho="holbertonschool"
+Scho="./holbertonschool"
 if [ -e "$Scho" ]
 then
     echo "$Scho file exists"
+    
     if [ -s "$Scho" ]
     then
 	echo "$Scho is not empty"
