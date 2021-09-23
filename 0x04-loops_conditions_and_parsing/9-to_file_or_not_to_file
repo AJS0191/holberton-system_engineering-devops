@@ -7,7 +7,7 @@ then
     
     if [ -s holbertonschool ]
     then
-	echo "holbertonschool is not empty"
+	echo "holbertonschool file is not empty"
 	if [ -f holbertonschool ]
 	   then
 	   echo "holbertonschool is a regular file"
