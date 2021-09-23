@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#indefinate loop with sleep 2 between
+
+
+pidof -s bash | xargs kill
