@@ -3,7 +3,7 @@
 i=0
 while ((i==0));
 do
-      echo "To infinite and beyond"
+      echo "To infinity and beyond"
       sleep 2
       ((i++))
       ((i--))
