@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#This file takes names from a list ListS and prints them with the word school afterwords
+for ITEM in *; do
+   echo "$ITEM" | cut --delimiter=- -f 2 
+done
