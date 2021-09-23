@@ -1,29 +1,29 @@
 #!/usr/bin/env bash
 # In this file I am using if statments on files to prove existence
-Scho="*/holbertonschool"
-if [ -e "$Scho" ]
+
+if [ -e holbertonschool ]
 then
-    echo "$Scho file exists"
+    echo "holbertonschool file exists"
     
-    if [ -s "$Scho" ]
+    if [ -s holbertonschool ]
     then
-	echo "$Scho is not empty"
-	if [ -f "$Scho" ]
+	echo "holbertonschool is not empty"
+	if [ -f holbertonschool ]
 	   then
-	   echo "$Scho file is a regular file"
+	   echo "holbertonschool file is a regular file"
 	   else
 	   true    
 	fi
     else
-	echo "$Scho file is empty"
-	if [ -f "$Scho" ]
+	echo "holbertonschool file is empty"
+	if [ -f holbertonschool ]
 	   then
-	   echo "$Scho file is a regular file"
+	   echo "holbertonschool file is a regular file"
 	   else
 	   true    
 	fi
     fi
     
 else
-    echo "$Scho file does not exist"
+    echo "holbertonschool file does not exist"
 fi
