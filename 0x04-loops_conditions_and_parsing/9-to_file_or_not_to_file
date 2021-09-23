@@ -10,7 +10,7 @@ then
 	echo "holbertonschool is not empty"
 	if [ -f holbertonschool ]
 	   then
-	   echo "holbertonschool file is a regular file"
+	   echo "holbertonschool is a regular file"
 	   else
 	   true    
 	fi
@@ -18,7 +18,7 @@ then
 	echo "holbertonschool file is empty"
 	if [ -f holbertonschool ]
 	   then
-	   echo "holbertonschool file is a regular file"
+	   echo "holbertonschool is a regular file"
 	   else
 	   true    
 	fi
