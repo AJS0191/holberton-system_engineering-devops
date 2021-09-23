@@ -1,13 +1,12 @@
 #!/usr/bin/env bash
 #In this file I will be using a while loop to display every minute from hour zero to hour twelve.
-j=0
+j=1
 i=0
 while (( i < 12 ));
 do
     echo "Hour: $i"
 
-    if (( i < 12 ));
-    then
+   
 	
 	while (( j < 60 ));
 	  
@@ -16,7 +15,7 @@ do
        	    (( j++ ))
 	done
 	(( i++ ))
-	j=0
-    fi
+	j=1
+    
     
 done
