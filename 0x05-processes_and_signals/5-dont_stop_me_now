@@ -2,4 +2,4 @@
 #indefinate loop with sleep 2 between
 
 
-ps ax | grep 0x05-processes_and_signals/4-to_infinity_and_beyond |cut --delimiter=" " -f 1 |  xargs kill
+pgrep 0x05-processes_and_signals/4-to_infinity_and_beyond |cut --delimiter=" " -f 1 |  xargs kill
