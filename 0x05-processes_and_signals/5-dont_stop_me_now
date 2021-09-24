@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-#indefinate loop with sleep 2 between
-
-
-kill $(pgrep -f 4-dont_stop_me_now)
+#kill command me
+kill $(pgrep -f 4-to_infinity_and_beyond)
+       
