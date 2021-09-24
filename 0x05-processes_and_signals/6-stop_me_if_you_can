@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 #Using pkill or trap to stop commands
-trap 4-dont_stop_me_now 15 
-pkill -f 4-to_infinity_and_beyond
+ 
+pkill -15 4-to_infinity_and_beyond
