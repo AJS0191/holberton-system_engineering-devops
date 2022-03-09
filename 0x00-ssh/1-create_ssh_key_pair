@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#creating a new sshkey pair
+ssh-keygen -b 4096 -f ~/.ssh/school -P betty
