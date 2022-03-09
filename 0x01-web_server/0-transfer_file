@@ -2,7 +2,7 @@
 #copies a file to my server
 if [[ $4 ]]
 then
-echo "has 4 arguments"
+scp -i "$4" -o StrictHostKeyChecking=no "$1" "$3@$2:~"
 else
-echo "has less than 4 arguments"
+echo "Usage: 0-transfer_file PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY"
 fi
