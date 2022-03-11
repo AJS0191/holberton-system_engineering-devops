@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#copies a file to my server
+if [["$4"]]
+then
+echo "has 4 arguments"
+else
+echo "has less than 4 arguments"
+fi
