@@ -1,13 +1,7 @@
 #!/usr/bin/env bash
-#sets up nginx for webserver
+#sets up loadbalancer for webserver
 sudo apt-get update -y
-sudo apt-get install nginx -y
-sudo ufw allow 'Nginx HTTP'
-echo "Hello World" | sudo tee /var/www/html/index.nginx-debian.html
-echo "Ceci n'est pas une page" | sudo tee /var/www/html/error404.html
-error_loc_head="\terror_page 404 /error404.html;\n\n\tadd_header X-Served-By $HOSTNAME;\n\n\tlocation / {"
-replace="^\tlocation / {"
-new_text="\tlocation /redirect_me {\n\t\treturn 301 \$scheme://youtube.com/watch?v=QH2-TGUlwu4;\n\t}\n\n\tlocation / {"
-sudo sed -i "s@$replace@$new_text@" /etc/nginx/sites-available/default
-sudo sed -i "s@$replace@$error_loc_head@" /etc/nginx/sites-available/default
+sudo apt-get install haproxy -y
+echo -e "frontend httpwebf\n\tmode http\n\tbind *:80\n\tdefault_backend httpwebb\nbackend httpwebb\n\tmode http\n\tbalance roundrobin\n\tserver 3612-web-01 3.91.64.93:80 check\n\tserver 3612-web-02 54.221.117.207:80 check" | sudo tee -a /etc/haproxy/haproxy.cfg
+echo "ENABLE=1" | sudo tee -a /etc/default/haproxy
 sudo /etc/init.d/nginx restart
