@@ -46,14 +46,9 @@ def main():
     #print(attrList)
     jsonDic = {argv[1]:attrList}
     with open('USER_ID.json', 'w', encoding='utf-8') as jsonFile:
-        json.dump(jsonDic, jsonFile)
-        """
-    print('Employee {} is done with tasks({}/{}):'.format(employeeDict['name'],
-                                                          len(completed),
-                                                          len(allTasks)))
-    for task in completed:
-          print('\t {}'.format(task['title']))
-        """
+        jString = json.dumps(jsonDic)
+        jsonFile.write(jString)
+
 
 if __name__ == '__main__':
     main()
