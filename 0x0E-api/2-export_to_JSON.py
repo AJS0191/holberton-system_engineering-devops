@@ -45,7 +45,7 @@ def main():
         attrList.append(tempDic)
     #print(attrList)
     jsonDic = {argv[1]:attrList}
-    with open('USER_ID.json', 'w', encoding='utf-8') as jsonFile:
+    with open('{}.json'.format(argv[1]), 'w', encoding='utf-8') as jsonFile:
         jString = json.dumps(jsonDic)
         jsonFile.write(jString)
 
