@@ -1,0 +1,42 @@
+
+“What happens when you type ‘holbertonschool.com’ in your browser?”
+
+
+Browsing the internet is a process that most people do on a daily basis. Whether you are checking your email, looking through the latest gossip on social media, searching for something specific on a search engine like Google, or you’ve typed the domain name for your school into your browser, a certain set of procedures and protocols are followed to get the information from the vast network we call the internet. In this post we will dive into some of those protocols and procedures in detail as we answer the burning question: “What happens when you type ‘holbertonschool.com’ in your browser?”
+
+Before we break down all the steps happening behind the scenes in your web browser and the internet, let’s define some of the terms that are going to be used. These will familiarize you with some of the more technical terms used in this post.
+
+Definitions
+
+DNS - Domain Name System, or the yellowpages of the internet. This translates domain names to IP addresses to access information
+DNS request - A query sent to DNS to get the IP address of a domain name.
+TCP/IP - Transmission Control Protocol/Internet Protocol, the standard ruleset used when computers communicate over networks.
+Firewall - Security tool used in networking. It monitors traffic, allowing or stopping it based on set security protocols
+HTTPS/SSL - The secure version of the Hypertext Transfer Protocol, Secure Sockets Layer, 
+Load-balancer - distributes tasks across multiple servers for efficiency
+Web server - a server that is used solely to handle World Wide Web requests
+Application server - a server that is programmed to use, install and host applications
+Database -  a standardized collection of formatted data that is stored on a server
+ 
+Take care of TCP/IP
+ Now that we have covered of few of the terms we will be talking about in this post, I would like to give a bit more detail into what exactly the Transmission Control Protocol/Internet Protocol is. Tt is an ever evolving set of rules that have been in place for around three decades. It dictates how things should be handled when networking with the internet. The way that it handles naming domains is called the DNS (Domain Name System). Next we will go over how the TCP/IP dictates the DNS find the IP address that you are trying to connect to. 
+What’s in a DNS?
+We will begin by typing into our browser ‘www.holbertonschool.com’. This is the domain name of the site that we would like to visit. A domain name identifies the place you want to retrieve information from. When you press enter on your keyboard a query, or request is sent via the DNS. The DNS which connects each domain to an internet address called an IP (internet protocol) address. This IP address is linked to a server that communicates with the site you want to visit. In order for the DNS to connect you to the correct domain, your machine first makes a connection with a server called the DNS recursor. The DNS recursor will receive queries through tools like the browser you are using now. It then will make additional requests elsewhere in order to reach the correct domain based on your DNS query. Next the DNS will begin taking the human readable hostname you have queried and turning it into the corresponding IP address. The root server is where the DNS’s first decisions are made to find the IP address you are trying to connect to, it serves mainly as an intermediary to the next step in the DNS process. Following connection to a root server the DNS will connect to a TLD, or a Top Level Domain nameserver. This is specified in your request usually at the end, in ‘www.holbertonschool.com’ it is ‘com’” The final server the DNS uses to get to the IP address that you are requesting is the Authoritative nameserver. It is the server that will contain the address connected to the hostname. If it is allowed access to the address requested it is then responsible for sending that IP address to the DNS Recursor that made the request.
+HTTP, HTTPS, and SSL
+
+The DNS has now found the IP address that you are searching for. Now we need to begin communicating with a server linked to the site you're connecting with. How do we do this? HTTP or HyperText Transfer Protocol is the set of rules that are used for transferring data. This data is then used to build the Document that you would like to view. Some of the things that HTTP could transfer are images, video, text, HTML layout, scripts, and many other things. All the data we transfer over the internet (even typing in a domain name into the browser and hitting enter) are handled by HTTP requests. The answers that are sent back to the browser by the server are called responses. All the stages of the DNS were carried out by HTTP requests and responses from DNS servers. HTTPS, an extension of HTTP, is a system that secures transfers over a computer network. It is very prevalent on the internet. When using HTTPS the communications are encrypted using SSL (secure socket layer) ((now known as TLS)). This is put in place with private and public keys contained in security certificates on the host servers.
+
+
+   
+
+Security!
+
+HTTPS is not the only piece in the game of internet security. Next we will touch on firewalls and how they play a part with you connecting with a domain name on the internet. A firewall can be either software or hardware and is used to keep data in or out of a system. It keeps certain ports open, others closed, and monitors the traffic on any ports that are exposed to the internet. When we make requests to ‘www.holbertonschool.com’ our HTTP requests must make it through a port exposed by the firewall, and make it through whatever requirements it has in order for our request to get through to the server and for us to get a response back. 
+
+Balancing the load
+Now that the DNS has allowed us to communicate with the domain that we wanted to see, we will begin communicating with the different servers of that domain. The first of these that we will communicate with, and cover today is the Load Balancer. The load balancer is a server that determines which servers in a network will be handling what. It can be used to increase efficiency, as well as serve as setting up backups. It controls which server you will be sending requests to in order for you to get your webpage back.
+
+Web servers vs App servers
+The type of server that we will be connecting to when we type ‘www.holbertonschool.com’ is a web server. They are used to render webpages on browsers when connected to. Another type of server that is often used to support a web application is an application server. Application servers are used specifically for running applications over the web. They are usually used to support a web server, they are less secure but more flexible then a web server.
+Putting it together
+The DNS has connected you to the correct IP address. The sites load balancer has determined which web server you will be communicating with to render a page. Now the web server uses the application server to begin rendering the webpage you have requested. It pulls data from databases for information, it requests HTML for the structure of the page, and then it renders it together, hopefully quite beautifully in the browser.
