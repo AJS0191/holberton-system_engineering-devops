@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+#This will return information about the given domain as well as a subdomain.
+
+pull_sub () {
+    domain="$1"
+    subdomain="$2"
+    doctype="$(dig $subdomain.$domain | grep -A1 'ANSWER SECTION:' | tail -1 \
+| awk '{print $4;}')"
+    destination="$(dig $subdomain.$domain | grep -A1 'ANSWER SECTION:' | tai\
+l -1 | awk '{print $5;}')"
+    echo "The subdomain $subdomain is a $doctype record and points to\
+ $destination"
+}
+
+pull_all () {
+    domain="$1"
+    subs=("www" "lb-01" "web-01" "web-02")
+    for subdomain in "${subs[@]}"
+    do
+	doctype="$(dig $subdomain.$domain | grep -A1 'ANSWER SECTION:' | tail -1\
+| awk '{print $4;}')"
+	destination="$(dig $subdomain.$domain | grep -A1 'ANSWER SECTION:' | \
+tail -1 | awk '{print $5;}')"
+	echo "The subdomain $subdomain is $doctype record and points to \
+$destination"
+    done
+}
+if [ "$2" ]
+then
+    pull_sub "$1" "$2"
+else
+    pull_all "$1"
+fi
